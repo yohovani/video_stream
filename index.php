@@ -71,10 +71,10 @@
                     <div class="collapse navbar-collapse" id="navbarSupportedContent">
                       <ul class="navbar-nav mr-auto">
                         <li class="nav-item active">
-                          <a class="nav-link" href="#">Inicio <span class="sr-only">(current)</span></a>
+                          <a class="nav-link" href="#" onClick="listarCatalogo()">Inicio <span class="sr-only">(current)</span></a>
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Mi Lista</a>
+                          <a class="nav-link" href="#" onClick="mi_lista_peliculas('.$_SESSION['id'].')">Mi Lista</a>
                         </li>
                       </ul>
                       <form class="form-inline my-2 my-lg-0">
@@ -129,41 +129,10 @@
       ?>
 
     <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="false" id="MostrarVideo" name="MostrarVideo">
-      <div class="modal-dialog modal-lg bg-dark">
-        <div class="modal-content">
-          <div class="modal-header bg-dark">
-            <h5 class="modal-title"><p id="tituloVideo"></p></h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-               <span aria-hidden="true">&times;</span>
-               </button>
-          </div>
-          <div class="modal-body bg-dark" align="center" id="Video" name="Video">
+      <div class="modal-dialog modal-lg bg-dark" id="Video" name="Video">
 
-        </div>
       </div>
     </div>
-
-    <div class="modal fade" name="mensaje" id="mensaje">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header bg-dark">
-                    <h4>&nbsp;Se Agrego un nuevo video a tu lista</h4>
-                    <button type="button" class="close" data-dismiss="modal">x</button>
-                </div>
-                <div class="modal-body bg-dark">
-
-                  <div class="alert alert-success" role="alert" align="center">
-                      <h4 class="alert-heading">Nuevo contenido en tu lista</h4>
-                      <p>Se Agrego</p> <h5 id="pelicula_titulo"></h5> <p>a tu lista.</p>
-                      <button class='btn btn-success' data-dismiss='modal'>Aceptar</button>
-                  </div>
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
 
   </body>
 </html>
