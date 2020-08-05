@@ -3,11 +3,11 @@
 
     require_once "consulta.php";
     $sql = new Consulta();
-    $sql->setSql("SELECT id,ruta FROM peliculas WHERE id='".$id."'");
+    $sql->setSql("SELECT id,ruta,titulo FROM peliculas WHERE id='".$id."'");
     $video = $sql->runQuery();
 
     $video = mysqli_fetch_array($video);
-$id = $video[0];
+
     echo '
     <video class="video-js vjs-theme-city"
         id="my-video"
@@ -24,5 +24,5 @@ $id = $video[0];
     <form>
     <input type="hidden" name="idVideoStream" id="idVideoStream" value="'.$id.'">
     </form>
-    <button type="button" class="btn btn-success btn-lg btn-block" onclick="agregar_lista()"><img whidrh="20 px" height="20 px" src="Img\iconos\anadir.svg"/> &nbspAgregar a mi Lista</button>
-    <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" onclick="addList()">Cerrar'.$video[0].'</button>';
+    <button type="button" class="btn btn-success btn-lg btn-block" onclick="addList('.$id.',\''.$video[2].'\')"><img whidrh="20 px" height="20 px" src="Img\iconos\anadir.svg"/> &nbspAgregar a mi Lista</button>
+    <button type="button" class="btn btn-danger btn-lg btn-block" data-dismiss="modal" ">Cerrar</button>';

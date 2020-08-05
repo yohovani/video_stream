@@ -143,6 +143,26 @@
       </div>
     </div>
 
+    <div class="modal fade" name="mensaje" id="mensaje">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header bg-dark">
+                    <h4>&nbsp;Se Agrego un nuevo video a tu lista</h4>
+                    <button type="button" class="close" data-dismiss="modal">x</button>
+                </div>
+                <div class="modal-body bg-dark">
+
+                  <div class="alert alert-success" role="alert" align="center">
+                      <h4 class="alert-heading">Nuevo contenido en tu lista</h4>
+                      <p>Se Agrego</p> <h5 id="pelicula_titulo"></h5> <p>a tu lista.</p>
+                      <button class='btn btn-success' data-dismiss='modal'>Aceptar</button>
+                  </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
 
 
   </body>
